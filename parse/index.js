@@ -73,15 +73,17 @@ const api = new ParseServer({
   directAccess: useDirectAccess,
   enforcePrivateUsers: enforcePrivateUsers,
   // Setup your push adatper
-  /*push: {
-    ios: [
-      {
-        pfx: '',
-        topic: '',
-        production: false
-      }
-    ]
-  },
+  push: {
+    ios: {
+      token: {
+	key: './AuthKey_A8L92M52JW.p8',
+	keyId: 'A8L92M52JW',
+	teamId: 'R84X97ZA3G'
+      },
+      topic: 'com.lilly.CareKitClientAppBo', 
+      production: false
+    }    
+  },  /*
   auth: {
    apple: {
      client_id: "",

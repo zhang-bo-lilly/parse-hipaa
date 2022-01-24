@@ -13,7 +13,7 @@ services:
             PORT: ${PORT}
             PARSE_SERVER_MOUNT_PATH: /parse
             PARSE_SERVER_URL: http://parse:${PORT}/parse
-            PARSE_PUBLIC_SERVER_URL: http://localhost:${PORT}/parse
+            PARSE_PUBLIC_SERVER_URL: http://18.221.110.84:${PORT}/parse
             PARSE_SERVER_CLOUD: /parse-server/cloud/main.js
             PARSE_SERVER_MOUNT_GRAPHQL: 'true'
             PARSE_SET_USER_CLP: 'true' # Default User schema so only authenticated users can access
@@ -30,6 +30,7 @@ services:
         volumes:
             - ./scripts/wait-for-postgres.sh:/parse-server/wait-for-postgres.sh
             - ./parse/index.js:/parse-server/index.js
+            - ./parse/AuthKey_A8L92M52JW.p8:/parse-server/AuthKey_A8L92M52JW.p8
             - ./parse/cloud:/parse-server/cloud
             - ./files:/parse-server/files # All files uploaded from users are stored to an ecrypted drive locally for HIPAA compliance
         restart: always
@@ -46,7 +47,7 @@ services:
         volumes:
             - ./dashboard/parse-dashboard-config.json:/src/Parse-Dashboard/parse-dashboard-config.json
         ports:
-            - 127.0.0.1:4040:4040
+            - 172.31.41.81:4040:4040
         depends_on:
             - parse
     db:
