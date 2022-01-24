@@ -76,8 +76,8 @@ const api = new ParseServer({
   push: {
     ios: {
       token: {
-	key: './AuthKey_A8L92M52JW.p8',
-	keyId: 'A8L92M52JW',
+	key: './AuthKey_U34RY4WCXT.p8',
+	keyId: 'U34RY4WCXT',
 	teamId: 'R84X97ZA3G'
       },
       topic: 'com.lilly.CareKitClientAppBo', 
