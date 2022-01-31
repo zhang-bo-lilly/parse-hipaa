@@ -13,7 +13,7 @@ services:
             PORT: ${PORT}
             PARSE_SERVER_MOUNT_PATH: /parse
             PARSE_SERVER_URL: http://parse:${PORT}/parse
-            PARSE_PUBLIC_SERVER_URL: http://18.221.110.84:${PORT}/parse
+            PARSE_PUBLIC_SERVER_URL: http://18.220.172.186:${PORT}/parse
             PARSE_SERVER_CLOUD: /parse-server/cloud/main.js
             PARSE_SERVER_MOUNT_GRAPHQL: 'true'
             PARSE_SET_USER_CLP: 'true' # Default User schema so only authenticated users can access
@@ -47,7 +47,7 @@ services:
         volumes:
             - ./dashboard/parse-dashboard-config.json:/src/Parse-Dashboard/parse-dashboard-config.json
         ports:
-            - 172.31.41.81:4040:4040
+            - 172.31.14.79:4040:4040
         depends_on:
             - parse
     db:
