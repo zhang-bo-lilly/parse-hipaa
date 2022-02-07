@@ -80,10 +80,17 @@ const api = new ParseServer({
 	keyId: 'U34RY4WCXT',
 	teamId: 'R84X97ZA3G'
       },
-      topic: 'com.lilly.CareKitClientAppBo', 
+      topic: 'com.lilly.CareKitClientAppDebug', 
       production: false
     }    
-  },  /*
+  },
+  auth: {
+    apple: {
+      clientId: 'com.lilly.CareKitClientAppDebug'
+    }
+  },
+  sessionLength: 180, 
+  /*
   auth: {
    apple: {
      client_id: "",
