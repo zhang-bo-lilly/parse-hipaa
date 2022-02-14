@@ -89,7 +89,7 @@ const api = new ParseServer({
       clientId: 'com.lilly.CareKitClientAppDebug'
     }
   },
-  sessionLength: 180, 
+//  sessionLength: 180, 
   /*
   auth: {
    apple: {
