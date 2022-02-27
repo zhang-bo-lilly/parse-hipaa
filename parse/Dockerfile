@@ -1,8 +1,8 @@
-FROM parseplatform/parse-server:5.0.0-alpha.18
+FROM parseplatform/parse-server:5.0.0-alpha.23
 
 USER root
 RUN apk add postgresql-client;
-RUN npm install netreconlab/parse-auditor#masterKey clamscan @parse/s3-files-adapter parse-server-api-mail-adapter
+RUN npm install netreconlab/parse-auditor#masterKey clamscan @parse/s3-files-adapter parse-server-api-mail-adapter parse-server-any-analytics-adapter @analytics/google-analytics
 RUN mkdir ./files
 RUN chown node ./files
 USER node
