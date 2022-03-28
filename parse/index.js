@@ -80,13 +80,13 @@ const api = new ParseServer({
 	keyId: 'U34RY4WCXT',
 	teamId: 'R84X97ZA3G'
       },
-      topic: 'com.lilly.CareKitClientAppDebug', 
+      topic: 'com.gmail.salladzh.BehaviorCoaching', 
       production: false
     }    
   },
   auth: {
     apple: {
-      clientId: 'com.lilly.CareKitClientAppDebug'
+      clientId: 'com.gmail.salladzh.BehaviorCoaching'
     }
   },
 //  sessionLength: 180, 
