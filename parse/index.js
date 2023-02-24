@@ -80,13 +80,13 @@ const api = new ParseServer({
 	keyId: 'U34RY4WCXT',
 	teamId: 'R84X97ZA3G'
       },
-      topic: 'com.gmail.salladzh.BehaviorCoaching', 
+      topic: 'com.gmail.salladzh.RLDemo', 
       production: false
     }    
   },
   auth: {
     apple: {
-      clientId: 'com.gmail.salladzh.BehaviorCoaching'
+      clientId: 'com.gmail.salladzh.RLDemo'
     }
   },
 //  sessionLength: 180, 
@@ -171,14 +171,14 @@ const api = new ParseServer({
 const app = express();
 
 // Serve static assets from the /public folder
-app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use('/api/public', express.static(path.join(__dirname, '/public')));
 
 // Serve the Parse API on the /parse URL prefix
 const mountPath = process.env.PARSE_SERVER_MOUNT_PATH || '/parse';
 app.use(mountPath, api.app);
 
 // Parse Server plays nicely with the rest of your web routes
-app.get('/', function(req, res) {
+app.get('/api', function(req, res) {
   res.status(200).send('I dream of being a website.  Please start the parse-server repo on GitHub!');
 });
 
